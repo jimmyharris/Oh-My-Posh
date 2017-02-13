@@ -1,7 +1,8 @@
 # Oh-My-Posh
-[![Join the chat at https://gitter.im/pecigonzalo/Oh-My-Posh](https://badges.gitter.im/pecigonzalo/Oh-My-Posh.svg)](https://gitter.im/pecigonzalo/Oh-My-Posh?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-After getting tired of mantaining my powershell profile, I decided to split the components and improve it, as I already use (Oh-My-Zsh)[ohmyz.sh] I thought it would be a good idea to have something similar on Powershell.
+This is a clone of pecigonzalo/Oh-My-Posh that includes useful configurations for SSH and other tools.
+
+After getting tired of mantaining my powershell profile, I decided to split the components and improve it, as I use zplug to manage my zsh profile and I figured something similar here would be useful. I thought it would be a good idea to have something similar on Powershell.
 
 Please feel free to submit issues/pull requests/questions/feature reqeusts.
 
@@ -13,7 +14,7 @@ Requires:
 
 Run:
 ```
-iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/pecigonzalo/Oh-My-Posh/master/install.ps1'))
+iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/jimmyharris/Oh-My-Posh/master/install.ps1'))
 ```
 
 Add the following line to your powershell profile:

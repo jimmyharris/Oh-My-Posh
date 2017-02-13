@@ -4,7 +4,7 @@ try {
         $gitStatus = $true
     } else { throw }
 } catch {
-    Write-Warning "Missing git support, install posh-git with 'Install-Module posh-git' and restart cmder."
+    Write-Warning "Missing git support, install posh-git with 'Install-Module posh-git' and restart."
     $gitStatus = $false
 }
 
