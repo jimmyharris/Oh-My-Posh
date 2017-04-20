@@ -1,7 +1,10 @@
 # Check for $Env:OHMYPOSH_ROOT and use default directory if not available.
 
-if( -Not(Test-Path Env:\OHMYPOSHROOT) ) {
+if( -Not(Test-Path Env:\OHMYPOSH_ROOT) ) {
     $Env:OHMYPOSH_ROOT = "$Env:USERPROFILE\.oh-my-posh"
+    Write-Host "Using default OHMYPOSH_ROOT = $Env:OHMYPOSH_ROOT"
+} else {
+    Write-Host "Found OHMYPOSH_ROOT = $Env:OHMYPOSH_ROOT"
 }
 
 # Check if profile is specified via an environment variable.
@@ -11,7 +14,7 @@ if ( -Not( Test-Path Env:\OHMYPOSH_CONFIG ) ) {
 
 # Check if that profile exists, If not, copy a template to that location.
 If ( Test-Path ("$Env:OHMYPOSH_CONFIG") ) {
-    Write-Output "Detected a local configuration at $Env:OHMYPOSH_CONFIG"
+    Write-Host "Detected a local configuration at $Env:OHMYPOSH_CONFIG"
 } else {
     Copy-Item $Env:OHMYPOSH_ROOT"\.oh-my-posh\template\oh-my-posh.config.ps1" $Env:OHMYPOSH_CONFIG
 }
