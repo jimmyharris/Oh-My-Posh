@@ -4,6 +4,6 @@ function waf {
 }
 
 function ibwaf {
-    Get-ChildItem ibwaf -ErrorAction Stop > $null
-    .\ibwaf $args
+    Get-ChildItem ibwaf-and-exit.bat -ErrorAction Stop > $null
+    .\ibwaf-and-exit.bat $args
 }
