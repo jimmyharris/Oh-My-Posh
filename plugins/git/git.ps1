@@ -13,8 +13,6 @@ try {
     $gitStatus = $false
 }
 
-Set-Alias -Name git-bash -Value 'C:\\Program Files\\Git\\bin\\sh.exe'
-
 function checkGit($Path = "") {
     if (Test-Path -Path (Join-Path $Path '.git/') ) {
         Write-VcsStatus
